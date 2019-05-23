@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomRoundTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HED-uV-5JY">
+                                <rect key="frame" x="177" y="712" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.67571893020125051" blue="0.68179002696505409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ggs-nl-pHY"/>
+                                    <constraint firstAttribute="width" constant="60" id="o1w-he-JSq"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showNewVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFp-3v-4Fa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53237076984356357" green="1" blue="0.98756441281612961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HED-uV-5JY" secondAttribute="bottom" constant="90" id="jmi-zQ-r7j"/>
+                            <constraint firstItem="HED-uV-5JY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mzB-gR-vy2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="HED-uV-5JY" id="RBP-Sh-G5X"/>
+                        <segue destination="Rr7-hk-HUV" kind="presentation" identifier="ShowNewVC" id="1TH-Wv-iMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="135"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="rBD-Bv-sRN">
+            <objects>
+                <viewController id="Rr7-hk-HUV" customClass="NewViewController" customModule="CustomRoundTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DDy-g6-PHw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRg-1A-kWo">
+                                <rect key="frame" x="183.5" y="430" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="HIDE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideNewVC:" destination="Rr7-hk-HUV" eventType="touchUpInside" id="BGW-yc-lms"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57279680419215584" blue="0.55995855126591998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CRg-1A-kWo" firstAttribute="centerX" secondItem="DDy-g6-PHw" secondAttribute="centerX" id="3As-lO-3F9"/>
+                            <constraint firstItem="CRg-1A-kWo" firstAttribute="centerY" secondItem="DDy-g6-PHw" secondAttribute="centerY" id="VA5-kt-fC7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gJ2-vf-eEb"/>
+                    </view>
+                    <connections>
+                        <outlet property="hideButton" destination="CRg-1A-kWo" id="gxs-Ax-ey1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uan-Sz-XID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="139"/>
+        </scene>
+    </scenes>
+</document>
